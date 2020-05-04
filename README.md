@@ -1,2 +1,2 @@
-# -study
+# study
 特效
