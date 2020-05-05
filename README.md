@@ -1,8 +1,3 @@
----
-title: [The title of your site]
-description: [A short description of your site's purpose]
----
-
 <!-- 
 jekyll-theme-cayman
 jekyll-theme-slate
@@ -21,6 +16,3 @@ jekyll-theme-dinky
 # 小东西儿
 
 ## 记录
-
-### [图片交互特效](./图片交互特效/index.html)
-
