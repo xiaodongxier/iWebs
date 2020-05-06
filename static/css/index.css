@@ -57,6 +57,7 @@ a {
 .wrap ul li .image {
     /* width: 100%; */
     height: 120px;
+    overflow: hidden;
 }
 
 .wrap ul li .content {
