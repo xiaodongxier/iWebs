@@ -58,6 +58,7 @@ a {
     /* width: 100%; */
     height: 120px;
     overflow: hidden;
+    box-shadow: 0 0 2px 0 #adadad;
 }
 
 .wrap ul li .content {
