@@ -15,4 +15,4 @@ jekyll-theme-dinky
 
 # 小东西儿
 
-## 记录
+## 有趣案例记录

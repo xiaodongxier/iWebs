@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>加载动效</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-image: url(https://cdn.jsdelivr.net/gh/xiaodongxier/figurebed@master/static/20200429163211.png);
+            background-size: 100% 100%;
+            -webkit-animation: wang 12s steps(12) infinite;
+            animation: wang 12s steps(12) infinite;
+        }
+
+        @-webkit-keyframes wang {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes wang {
+            0% {
+                -webkit-transform: rotate(0);
+                transform: rotate(0);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+    <div class="box"></div>
+</body>
+</html>

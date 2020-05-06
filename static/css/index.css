@@ -37,7 +37,7 @@ a {
 
 .wrap ul li {
     width: 180px;
-    height: 250px;
+    height: 170px;
     float: left;
     border: 1px solid #ccc;
     cursor: pointer;
@@ -59,19 +59,23 @@ a {
     height: 120px;
 }
 
-.wrap ul li .content h4 {
-    font-size: 18px;
-    font-weight: 400;
-    color: #000;
-    line-height: 30px;
-    text-align: center;
+.wrap ul li .content {
+    margin: 5px 0 0 0;
+}
+
+.wrap ul li .ellipsis {
+    display: -webkit-inline-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .wrap ul li .content p {
     color: #444;
-    font-size: 16px;
+    font-size: 15px;
+    font-family: serif;
+    text-align: justify;
+    -webkit-line-clamp: 2;
 }
-
-
-
-
