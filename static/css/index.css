@@ -1,83 +1,59 @@
-* {
-    padding: 0;
-    margin: 0;
-}
-
-ul,ol,li {
-    list-style: none;
-}
-
-img {
-    width: 100%;
-}
-
-body {
-    background: #19a085;
-}
-
-a {
-    text-decoration: none;
-}
-
-.wrap {
+* {padding: 0;margin: 0;}
+/* ul,ol,li {list-style: none;} */
+img {width: 100%;}
+a {text-decoration: none;cursor: pointer;}
+.content_box {
+    /* margin: 0 100px; */
     width: 990px;
-    margin: 20px auto;
-    background: #fff;
+    margin: 0 auto;
 }
 
-.wrap h1 {
-    margin-left: 9px;
+.content_box details .item_des{
+    margin-left: 30px;
 }
 
-
-.wrap ul {
-    overflow: hidden;
-    padding: 9px;
-}
-
-.wrap ul li {
-    width: 180px;
-    height: 170px;
-    float: left;
-    border: 1px solid #ccc;
-    cursor: pointer;
-    padding: 4px;
-    margin-bottom: 5px;
-}
-
-.wrap ul li:hover {
-    box-shadow: 0px 0 5px 0px rgba(0, 0, 0, .5);
-}
-
-
-.wrap ul li:not(:nth-child(5n)) {
-    margin-right: 5px;
-}
-
-.wrap ul li .image {
-    /* width: 100%; */
-    height: 120px;
-    overflow: hidden;
-    box-shadow: 0 0 2px 0 #adadad;
-}
-
-.wrap ul li .content {
-    margin: 5px 0 0 0;
-}
-
-.wrap ul li .ellipsis {
-    display: -webkit-inline-box;
-    -webkit-line-clamp: 1;
-    -webkit-box-orient: vertical;
-    -o-text-overflow: ellipsis;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.wrap ul li .content p {
-    color: #444;
+.content_box details .item_des p{
+    color: #e9676b;
     font-size: 15px;
+    line-height: 30px;
     font-family: serif;
-    text-align: justify;
-    -webkit-line-clamp: 2;
+    font-weight: 400;
 }
+
+.content_box details .item_des p::before {
+    content: "描述: ";
+    font-weight: 900;
+    color: #e9676b;
+}
+
+
+.content_box details .item_des button {
+    padding: 2px 10px;
+    margin-bottom: 5px;
+    vertical-align: middle;
+    background-color: rgb(233, 104, 107);
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 6px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+    font-family: 微软雅黑;
+    transition: all 0.2s ease-out 0s;
+    border-radius: 5px;
+}
+
+.content_box details .item_des button:hover {
+    background-color: #ba3537;
+    color: #fff;
+}
+
+
+
+.content_box details .item_des button  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+}
+
+
+
