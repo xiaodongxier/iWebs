@@ -2,23 +2,113 @@
  * @Date: 2020-05-28 11:23:15
  * @Author: WangYongJie
  * @e-mail: admin@xiaodongxier.com
- * @LastEditTime: 2020-05-28 13:14:25
---> 
+ * @LastEditTime: 2020-05-28 13:36:55
+-->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="keywords" content="小东西儿,前端案例总结">
     <meta name="description" content="王永杰的网络日志">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>案例名称</title>
+    <title>进度条动效</title>
     <link rel="shortcut icon" href="../../static/image/favicon.png" type="image/x-icon">
     <style>
+        .wrap {
+            width: 400px;
+            height: 25px;
+            border: 1px solid red;
+            border-radius: 30px;
+            overflow: hidden;
+            position: relative;
+        }
 
-        
+        .bar_box {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            background-color: #fde4a3;
+            background-image: -webkit-linear-gradient(#fde4a3, #fde0a2);
+            /* -webkit-animation: wang 1s ease forwards;
+            animation: wang 2s ease forwards; */
+        }
+
+        .wrap:hover .bar_box{
+            -webkit-animation: wang 1s ease forwards;
+            animation: wang 2s ease forwards;
+        }
+
+
+        .bar_box::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            background-image: -webkit-gradient(linear, 0 0, 100% 100%,
+                    color-stop(.25, #fbca64),
+                    color-stop(.25, transparent),
+                    color-stop(.5, transparent),
+                    color-stop(.5, #fbca64),
+                    color-stop(.75, #fbca64),
+                    color-stop(.75, transparent),
+                    to(transparent));
+            z-index: 1;
+            background-size: 25px 25px;
+            overflow: hidden;
+            -webkit-animation: yong .5s linear infinite;
+            animation: yong .5s linear infinite
+        }
+
+        @-webkit-keyframes wang {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 200px;
+            }
+        }
+
+        @keyframes wang {
+            0% {
+                width: 0;
+            }
+
+            100% {
+                width: 100%;
+            }
+        }
+
+        @-webkit-keyframes yong {
+            0% {
+                background-position: 0 0
+            }
+
+            100% {
+                background-position: 25px 25px;
+            }
+        }
+
+        @keyframes yong {
+            0% {
+                background-position: 0 0
+            }
+
+            100% {
+                background-position: 25px 25px;
+            }
+        }
     </style>
 </head>
 <body>
-    
+    <h4><code>hover</code>效果，鼠标放上看效果。</h4>
+    <div class="wrap">
+        <div class="bar_box"></div>
+    </div>
 </body>
+
 </html>
