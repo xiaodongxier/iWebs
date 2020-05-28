@@ -1,0 +1,62 @@
+<!--
+ * @Date: 2020-05-28 11:23:15
+ * @Author: WangYongJie
+ * @e-mail: admin@xiaodongxier.com
+ * @LastEditTime: 2020-05-28 17:24:03
+--> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="小东西儿,前端案例总结">
+    <meta name="description" content="王永杰的网络日志">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>懒加载</title>
+    <link rel="shortcut icon" href="../../static/image/favicon.png" type="image/x-icon">
+    <style>
+        * {padding: 0;margin: 0;}
+        .wrap img {
+            display: block;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/1.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/2.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/3.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/4.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/5.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/6.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/8.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/9.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/10.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/11.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/12.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/13.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/14.jpg" alt="">
+        <img class="lazyloadimg" src="http://oss.xiaodongxier.com/test/0.jpg" data-src="http://oss.xiaodongxier.com/test/15.jpg" alt="">
+    </div>
+    <script>
+        window.onload = function () {
+            window.onscroll = function () {
+                var bodyScrollHeight = document.documentElement.scrollTop;// body滚动高度
+                var windowHeight = window.innerHeight;// 视窗高度
+                var imgs = document.getElementsByClassName('lazyloadimg');
+                // console.log(imgs)
+                for (var i = 0; i < imgs.length; i++) {
+                    var imgHeight = imgs[i].offsetTop;// 图片距离顶部高度  
+                    if (imgHeight < windowHeight + bodyScrollHeight) {
+                        imgs[i].src = imgs[i].getAttribute('data-src');
+                        imgs[i].className = imgs[i].className.replace('lazyloadimg', '')
+                    }
+                    console.log(imgHeight)
+                    console.log(windowHeight + bodyScrollHeight)
+                    console.log("------------------")
+                }
+            }
+        }
+    </script>
+</body>
+</html>
